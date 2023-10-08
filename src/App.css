@@ -229,11 +229,18 @@ body {
     padding: 15px;
     max-width: 100%;
     box-sizing: border-box;
+    margin-left: 15px;
   
   }
 
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
   .post-container {
-    max-width: 100%; /* Adjust for smaller screens */
+    max-width: 100%; 
   }
 
   .post-details {
