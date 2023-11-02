@@ -22,7 +22,8 @@ export const Navbar=()=>{
                 <>
                 <p>{user?.displayName}</p>
                 <img src={user?.photoURL || ""} alt={user?.displayName || ""} width="25" height="25" />
-                <button className="logout-button" onClick={logout}>Log Out</button>
+                <button className="logout-button" onClick={logout}><i class="ri-logout-box-r-line"></i></button>
+                <div className="hide">Logout!</div>
                 </>}   
                 </div>
         </div>

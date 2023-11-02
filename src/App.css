@@ -13,15 +13,19 @@ body {
   background-color: slateblue;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  padding:0 1vw;
 }
 
-.navbar .links {
+.links {
+  display: flex;
   text-align: center;
   margin-right: 50px;
+  /* gap:4vw; */
 }
 
 .links a {
+  font-size: 1vw;
   color: white;
   text-decoration: none;
   border-bottom: 3px solid white;
@@ -47,19 +51,26 @@ body {
 }
 
 .logout-button {
-  background-color: white;
-  color: black;
-  border: 2px solid #e7e7e7;
-  padding: 10px 20px;
-  border-radius: 50px;
-  margin-left: 20px;
-  margin-right: 0px;
+  background-color:slateblue; 
+  border:none;
+  color: white;
+  font-size: 0.5vw;
+  padding: 1.1vw 2vw;
+  margin:0 1.5vw;
   cursor: pointer;
 }
-
-.logout-button:hover {
-  background-color: #555555;
+.hide{
+  display:none;
+}
+.navbar i{
+  font-size: 2vw;
+  font-weight: 800;
+}
+.logout-button:hover::after {
   color:white;
+  content: "Logout";
+  display: flex;
+  font-size: 0.5vw;
 }
 
 .cool-form {
@@ -72,6 +83,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
 }
 .cool-input, .cool-textarea {
   width: 100%;
@@ -139,30 +151,34 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 2vw 2vw;
 
 }
 .post-container {
-  padding: 20px;
+  padding: 1vw 2vw;
   background-color: #ffffff; 
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%; 
   max-width: 400px; 
-  margin-bottom: 20px;
+  margin: 1vw 2vw;
+  line-height: 1.5vw;
 }
 
 .post-title {
-  font-size: 24px;
+  font-size: 1.5vw;
   color: #9c27b0; 
   margin-bottom: 10px;
 }
 
 .post-description {
-  font-size: 16px;
+  font-size: 1vw;
+  font-weight: 550;
   color: #333333; 
   margin-bottom: 10px;
 }
@@ -171,59 +187,84 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .username {
-  font-weight: bold;
+  font-size: 0.9vw;
+  font-weight: 200;
+  font-style: italic;
   color: black; 
 }
-
+.like-section{
+  display: flex;
+  justify-content: flex-end;
+}
 .like-button {
-  padding: 10px;
-  font-size: 20px;
-  background-color: #9c27b0; 
-  color: white;
+  font-size: 1.8vw;
+  font-weight: 600;
+  background-color: white; 
+  color: #9c27b0;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .like-button:hover {
-  background-color: #7b1fa2; 
+  font-size: 32px;
 }
 
 .like-count {
-  font-size: 16px;
+  font-size: 0.9vw;
   color: #9c27b0; 
-  /* margin-left: -170px; */
+
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .navbar {
     justify-content: space-between; 
-    padding: 10px;
+    padding:0 3vw;
     height: auto; 
+    width:100%;
   }
-
+ 
   .navbar .links {
     margin: 0;
   }
-
+  .links a{
+    font-size: 3vw;
+  }
   .navbar .user {
     margin: 0;
   }
 
-  .user p, .user img {
+  .user p {
     font-size: 14px; 
+    display: none;
+  }
+  .user img{
+    font-size: 14px; 
+  }
+  .user img:hover{
+    cursor: pointer;
   }
 
   .logout-button {
-    padding: 8px 16px; 
-    font-size: 14px; 
+    padding: 1.1vw 2.1vw; 
+     margin:1vw 4vw;
+  }
+  .navbar i{
+    display: block;
+    font-size: 4vw;
+    font-weight: 800;
   }
 
   .cool-form {
-    width: 100%; 
+    width: 90%; 
+    padding: 2vw 2vw;
+    margin: 3vw 3vw;
   }
   .signin-container {
     padding: 15px;
@@ -240,15 +281,33 @@ body {
   
   }
   .post-container {
+    padding:0 3vw;
+    margin:2vw 1.5vw;
     max-width: 100%; 
-  }
+    line-height: 3.5vw;
 
+  }
+  .post-title {
+    font-size: 3.5vw;
+  }
+  .post-description {
+    font-size: 3vw;
+    font-weight: 550;
+  }
   .post-details {
     justify-content: space-between;
   }
-
+  .username{
+    font-size: 2vw;
+  }
+  .like-count {
+    font-size: 2vw;
+  }
   .like-button {
-    font-size: 16px;
+    font-size: 4.5vw;
+  }
+  .like-button:hover {
+    font-size:40px;
   }
 }
 

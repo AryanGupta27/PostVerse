@@ -83,15 +83,17 @@ export const Post = (props) => {
         </div>
         <div className="post-details">
           <p className="username">@{post.username}</p>
-          <button
-            onClick={hasUserLiked ? removeLike : addLike}
-            className="like-button"
-          >
-            {hasUserLiked ? <>&#10084;</> : <>&#9825;</>}
-          </button>
-          {likes && <p className="like-count">Likes:{likes?.length}</p>}
+          <div className="like-section">
+            <button
+              onClick={hasUserLiked ? removeLike : addLike}
+              className="like-button"
+            >
+              {hasUserLiked ? <>&#10084;</> : <>&#9825;</>}
+            </button>
+            {likes && <p className="like-count">Likes:{likes?.length}</p>}
+          </div>
         </div>
       </div>
-     </div>
+    </div>
   );
 };
