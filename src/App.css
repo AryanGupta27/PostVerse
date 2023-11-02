@@ -305,6 +305,18 @@ body {
   }
   .like-button {
     font-size: 4.5vw;
+    /* color: #9c27b0; */
+    font-weight: 600;
+  background-color: white; 
+  color: #9c27b0;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  }
+  .like-button:hover{
+    font-size: 20px;
   }
  
 }
